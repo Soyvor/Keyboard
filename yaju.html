@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Keyboard</title>
+    <style>
+      #keyboard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 300px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #f7f7f7;
+      }
+      .key {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .key:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="keyboard">
+      <div class="key" onclick="sendKey('1')">1</div>
+      <div class="key" onclick="sendKey('2')">2</div>
+      <div class="key" onclick="sendKey('3')">3</div>
+      <div class="key" onclick="sendKey('4')">4</div>
+      <div class="key" onclick="sendKey('5')">5</div>
+      <div class="key" onclick="sendKey('6')">6</div>
+      <div class="key" onclick="sendKey('7')">7</div>
+      <div class="key" onclick="sendKey('8')">8</div>
+      <div class="key" onclick="sendKey('9')">9</div>
+      <div class="key" onclick="sendKey('0')">0</div>
+      <div class="key" onclick="sendKey('Q')">Q</div>
+      <div class="key" onclick="sendKey('W')">W</div>
+      <div class="key" onclick="sendKey('E')">E</div>
+      <div class="key" onclick="sendKey('R')">R</div>
+      <div class="key" onclick="sendKey('T')">T</div>
+      <div class="key" onclick="sendKey('Y')">Y</div>
+      <div class="key" onclick="sendKey('U')">U</div>
+      <div class="key" onclick="sendKey('I')">I</div>
+      <div class="key" onclick="sendKey('O')">O</div>
+      <div class="key" onclick="sendKey('P')">P</div>
+      <div class="key" onclick="sendKey('A')">A</div>
+      <div class="key" onclick="sendKey('S')">S</div>
+      <div class="key" onclick="sendKey('D')">D</div>
+      <div class="key" onclick="sendKey('F')">F</div>
+      <div class="key" onclick="sendKey('G')">G</div>
+      <div class="key" onclick="sendKey('H')">H</div>
+      <div class="key" onclick="sendKey('I')">H</div>
+      <div class="key" onclick="sendKey('J')">J</div>
+      <div class="key" onclick="sendKey('K')">K</div>
+      <div class="key" onclick="sendKey('L')">L</div>
+      <div class="key" onclick="sendKey('Z')">Z</div>
+      <div class="key" onclick="sendKey('X')">X</div>
+      <div class="key" onclick="sendKey('C')">C</div>
+      <div class="key" onclick="sendKey('V')">V</div>
+      <div class="key" onclick="sendKey('B')">B</div>
+      <div class="key" onclick="sendKey('N')">N</div>
+      <div class="key" onclick="sendKey('M')">M</div>
+      <div class="key" onclick="sendKey(',')">,</div>
+      <div class="key" onclick="sendKey('.')">.</div>
+      <div class="key" onclick="sendKey('?')">?</div>
+      <div class="key" onclick="sendKey('!')">!</div>
+      <div class="key" onclick="sendKey('@')">@</div>
+      <div class="key" onclick="sendKey('#')">#</div>
+      <div class="key" onclick="sendKey('$')">$</div>
+      <div class="key" onclick="sendKey('%')">%</div>
+      <div class="key" onclick="sendKey('^')">^</div>
+      <div class="key" onclick="sendKey('&')">&amp;</div>
+      <div class="key" onclick="sendKey('*')">*</div>
+      <div class="key" onclick="sendKey('(')">(</div>
+      <div class="key" onclick="sendKey(')')">)</div>
+      <div class="key" onclick="sendKey('-')">-</div>
+      <div class="key" onclick="sendKey('_')">_</div>
+      <div class="key" onclick="sendKey('+')">+</div>
+      <div class="key" onclick="sendKey('=')">=</div>
+      <div class="key" onclick="sendKey('{')">{</div>
+      <div class="key" onclick="sendKey('}')">}</div>
+      <div class="key" onclick="sendKey('[')">[</div>
+      <div class="key" onclick="sendKey(']')">]</div>
+      <div class="key" onclick="sendKey('\\')">\\</div>
+      <div class="key" onclick="sendKey('|')">|</div>
+      <div class="key" onclick="sendKey(';')">;</div>
+      <div class="key" onclick="sendKey(':')">:</div>
+      <div class="key" onclick="sendKey('\'')">\'</div>
+      <div class="key" onclick="sendKey('\'')">\"</div>
+      <div class="key" onclick="sendKey('&lt;')">&lt;</div>
+      <div class="key" onclick="sendKey('&gt;')">&gt;</div>
+      <div class="key" onclick="sendKey('/')">/</div>
+      <div class="key" onclick="sendKey(' ')">&nbsp;</div>
+      <div class="key" onclick="deleteLastChar()">&larr;</div>
+    </div>
+    <script>
+      function sendKey(key) {
+        document.getElementById("output").value += key;
+      }
+    
+      function deleteLastChar() {
+        var output = document.getElementById("output").value;
+document.getElementById("output").value = output.slice(0, -1);
+}
+</script>
+
+  </body>
+</html>
+    
